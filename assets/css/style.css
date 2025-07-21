@@ -1,0 +1,25 @@
+/* Force Dark Mode for GitHub Pages */
+body {
+  background-color: #121212 !important;
+  color: #f0f0f0 !important;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  color: #4da3ff !important;
+}
+
+header, footer, nav {
+  background-color: #1f1f1f !important;
+  color: #ffffff !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff !important;
+}
+
+.container {
+  background-color: #181818 !important;
+  padding: 20px;
+  border-radius: 8px;
+}

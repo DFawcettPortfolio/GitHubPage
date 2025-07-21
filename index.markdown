@@ -1,8 +1,10 @@
 ---
-layout: home
+layout: none
 title: My Portfolio
 ---
 
-# Welcome!
+<head>
+<link rel="stylesheet" href="/GitHubPage/assets/css/style.css">
+</head>
 
 This is my portfolio site using the **Midnight** theme.
