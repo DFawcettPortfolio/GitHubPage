@@ -5,4 +5,4 @@ title: My Portfolio
 
 # Welcome!
 
-This is my portfolio site using the **Cayman Dark** theme.
+This is my portfolio site using the **Midnight** theme.
