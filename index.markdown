@@ -4,8 +4,6 @@
 
 layout: home
 ---
----
-layout: default
 title: My Portfolio
 ---
 
