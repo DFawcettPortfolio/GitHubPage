@@ -1,25 +1,33 @@
-/* Force Dark Mode for GitHub Pages */
-body {
-  background-color: #121212 !important;
-  color: #f0f0f0 !important;
-  font-family: Arial, sans-serif;
+/* Force Dark Mode for GitHub Pages */  
+/* '!important' tag will override ALL previous styling rules for that specific property on that element */
+body {  
+  background-color: #121212 !important; /* Set page background to very dark gray for dark mode */
+  color: #f0f0f0 !important;           /* Set default text color to light gray for readability */
+  font-family: Arial, sans-serif;      /* Use Arial font, fallback to any sans-serif font */
 }
 
-a {
-  color: #4da3ff !important;
+a {  /* external links */
+  color: #4da3ff !important;           /* Set link color to bright blue for visibility */
 }
 
-header, footer, nav {
-  background-color: #1f1f1f !important;
-  color: #ffffff !important;
+header, footer, nav {  
+  background-color: #1f1f1f !important; /* Slightly lighter dark background for contrast */
+  color: #ffffff !important;            /* Set text color to pure white for clarity */
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #ffffff !important;
+h1, h2, h3, h4, h5, h6 {  
+  color: #ffffff !important;            /* Force headings to be white for emphasis */
 }
 
-.container {
-  background-color: #181818 !important;
-  padding: 20px;
-  border-radius: 8px;
+.container {  
+  background-color: #181818 !important; /* Dark gray background to create a card-like look */
+  padding: 20px;                        /* Add 20px inner spacing inside the container */
+  border-radius: 8px;                   /* Round container corners for a modern look */
+}
+
+.big-text {                             /* custom emphasis text */
+  font-size: 28px;
+  line-height: 1.6;
+  font-style: italic;
+  color: #ffffff;
 }
