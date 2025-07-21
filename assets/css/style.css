@@ -27,7 +27,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .big-text {                             /* custom emphasis text */
   font-size: 78px;
-  line-height: 1.6;
   font-style: italic;
   color: #ffffff;
 }
