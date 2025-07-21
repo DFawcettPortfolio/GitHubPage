@@ -28,9 +28,7 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
-theme: minima
-minima:
-  skin: dark
+theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
 
