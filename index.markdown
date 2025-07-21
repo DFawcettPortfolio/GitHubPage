@@ -4,7 +4,7 @@
 
 layout: home
 ---
-title: My Portfolio
+My Portfolio
 ---
 
 # Welcome!
