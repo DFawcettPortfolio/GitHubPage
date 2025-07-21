@@ -24,5 +24,5 @@ Welcome to my portfolio
 </a>
 
 <!-- Embedded PDF preview -->
-<embed src="/GitHubPage/assets/pdf/DevinFawcettResume.pdf" type="application/pdf" width="100%" height="600px" />
+<!-- <embed src="/GitHubPage/assets/pdf/DevinFawcettResume.pdf" type="application/pdf" width="100%" height="600px" /> -->
 
