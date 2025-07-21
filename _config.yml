@@ -28,6 +28,7 @@ github_username:  DFawcettPortfolio
 
 # Build settings
 remote_theme: lewismiddleton/cayman-dark
+plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 
 # Exclude from processing.
