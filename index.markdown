@@ -23,4 +23,6 @@ Welcome to my portfolio
 </ul>
 
 <h1>My GitHub Repo</h1>
-<a> https://github.com/DFawcettPortfolio </a>
+<a href="https://github.com/DFawcettPortfolio" target="_blank" rel="noopener noreferrer">
+  https://github.com/DFawcettPortfolio
+</a>
