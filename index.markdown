@@ -7,4 +7,4 @@ title: My Portfolio
 <link rel="stylesheet" href="/GitHubPage/assets/css/style.css">
 </head>
 
-This is my portfolio site using the **Midnight** theme.
+This is my portfolio site using a custom CSS page.
