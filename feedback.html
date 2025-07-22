@@ -23,17 +23,63 @@
 <a href="https://github.com/DFawcettPortfolio" target="_blank" rel="noopener noreferrer">
   GitHub Repo
 </a> 
-</div> <!-- class = "navigation"-->
-<h1>Help Me Improve!</h1>
-<p>I am a solo developer working independently, if you notice any bugs or errors in my work, or if you think of any features you believe would improve your User Experience, please email me at devin.fawcett@gmail.com and I will review all feedback.
+</div> <!-- .navigation-->
+<div class = "body-standard">
+<h1>Want to know more?</h1>
+Feel free to email me at  <span id="email" style="color:#4da3ff; cursor:pointer; user-select:none;">
+    devin.fawcett@gmail.com</span>.
+<br><br>
+I’m a solo developer working independently and actively seeking opportunities to contribute to meaningful projects. If you notice any bugs or errors, or simply have suggestions for improving the user experience in my work, please don’t hesitate to reach out. I carefully review all feedback to continuously improve my projects.
 <br><br>
 -Thank You!
 </p>
+</div> <!-- .body-standard-->
 
 
 
+<!-- Notification popup -->
+<div id="copy-notification" style="
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #4da3ff;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  z-index: 1000;
+">
+  Email copied to clipboard!
+</div>
 
+<script>
+  const emailSpan = document.getElementById('email');
+  const notification = document.getElementById('copy-notification');
+
+  emailSpan.addEventListener('click', () => {
+    const email = emailSpan.textContent;
+    navigator.clipboard.writeText(email).then(() => {
+      // Show notification
+      notification.style.opacity = '1';
+      notification.style.pointerEvents = 'auto';
+
+      // Hide after 1.5 seconds
+      setTimeout(() => {
+        notification.style.opacity = '0';
+        notification.style.pointerEvents = 'none';
+      }, 750);
+    }).catch(err => {
+      console.error('Failed to copy email: ', err);
+    });
+  });
+</script>
 
 
 </body>
+
 </html>

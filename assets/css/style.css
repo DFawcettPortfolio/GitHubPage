@@ -91,6 +91,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: row;                  /* Links in a row */
   justify-content: start;               /* Align to the left */
   gap: 30px;                            /* Space between links */
+  padding-left: 40px;                   /* give the menu some space from the left edge before starting */
 }
 
 /* ===============================
@@ -146,9 +147,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Left column: main welcome content */
 .main-column {
   flex: 2;                              /* Take 2 parts of space */
-  
-  padding: 20px;                        /* Inner padding */
   border-radius: 8px;                   /* Rounded edges */
+
 }
 
 /* Right column: navigation menu */
@@ -231,17 +231,57 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center; /* Horizontal center */
 }
 
-.intro-row {
-  display: flex;
-  
-  gap: 20px; /* Space between image and text */
-  margin-bottom: 30px; /* Space below this row before About Me */
-}
+  .intro-row {
+    display: flex;
+    align-items: center;
+    }
+
+  .intro-text {
+    flex: 1;
+  }
 
 .profilePicture {
   flex-shrink: 0; /* Prevent image from shrinking */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  margin-right: 20px; /* Space between picture and intro text */
 }
 
-.intro-text {
-  flex-grow: 1; /* Text takes remaining space */
+.profilePicture img {
+  border-radius: 20%;
+  border: 2pt solid #96aa275e;
+  margin-bottom: 0px; 
+}
+
+.profilePicture-caption figcaption {
+  font-size: 0.6rem;
+  line-height: 0.8;
+  text-align: center; /* Center the caption text */
+}
+
+.profilePicture-caption p {
+  margin: 2px 0;
+}
+
+/* Remove default figure margins and padding */
+.profilePicture figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* Make the caption hug the image */
+.profilePicture-caption {
+  margin-top: 2px; /* Adjust this to control spacing (1-5px) */
+}
+
+/* Optional: If you want to make it even tighter */
+.profilePicture img {
+  display: block; /* Removes any tiny space under images */
+}
+
+.body-standard{
+padding-left: 40px;                   /* give the menu some space from the left edge before starting */
+padding-right: 40px;                   /* give the menu some space from the right edge at end */
+
 }
