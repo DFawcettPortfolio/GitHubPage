@@ -1,103 +1,232 @@
-/* Force Dark Mode for GitHub Pages */  
-/* '!important' tag will override ALL previous styling rules for that specific property on that element */
+/* ===============================
+   Global Dark Mode Styles
+================================= */
+
+/* Force entire page into dark mode */
 body {  
-  background-color: #121212 !important; /* Set page background to very dark gray for dark mode */
-  color: #f0f0f0 !important;           /* Set default text color to light gray for readability */
-  font-family: Arial, sans-serif;      /* Use Arial font, fallback to any sans-serif font */
+  background-color: #121212 !important; /* Main background: very dark gray */
+  color: #f0f0f0 !important;            /* Default text color: light gray for contrast */
+  font-family: Arial, sans-serif;       /* Clean, sans-serif font */
 }
 
-a {  /* external links */
-  color: #4da3ff !important;           /* Set link color to bright blue for visibility */
+/* Links styling */
+a {  
+  color: #4da3ff !important;            /* Bright blue for links */
 }
 
+/* Header, footer, and navigation bars */
 header, footer, nav {  
-  background-color: #1f1f1f !important; /* Slightly lighter dark background for contrast */
-  color: #ffffff !important;            /* Set text color to pure white for clarity */
+  background-color: #1f1f1f !important; /* Slightly lighter gray for contrast */
+  color: #ffffff !important;            /* Text inside stays pure white */
 }
 
+/* Headings (h1, h2, etc.) */
 h1, h2, h3, h4, h5, h6 {  
-  color: #ffffff !important;            /* Force headings to be white for emphasis */
+  color: #ffffff !important;            /* Force white headings for readability */
 }
 
+/* ===============================
+   Container Blocks & Layout
+================================= */
+
+/* Generic container for grouping content */
 .container {  
-  background-color: #181818 !important; /* Dark gray background to create a card-like look */
-  padding: 20px;                          /* Add 20px inner spacing inside the container */
-  border-radius: 8px;                     /* Round container corners for a modern look */
-  display: flex;                          /* Enables flex layout */
+  background-color: #181818 !important; /* Dark gray background block */
+  padding: 20px;                        /* Space inside the container */
+  border-radius: 8px;                   /* Rounded corners for modern look */
+  display: flex;                        /* Flex layout for horizontal alignment */
 }
 
-.big-text {                               /* custom emphasis text */
-  font-size: 38px;
-  font-style: italic;
-  color: #ffffff;
+/* Special large text style for emphasis */
+.big-text {  
+  font-size: 38px;                      /* Large font size */
+  font-style: italic;                   /* Italic style */
+  color: #ffffff;                       /* White color for visibility */
 }
 
+/* ===============================
+   Icon Layout Containers
+================================= */
+
+/* Centered icon row with spacing */
 .icon-container {  
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 30px;
+  flex-direction: row;                  /* Icons in a row */
+  justify-content: center;              /* Center align icons */
+  gap: 30px;                            /* Space between icons */
 }
 
+/* Left-aligned icon row with spacing */
 .icon-container-left-adjusted {  
   display: flex;
   flex-direction: row;
-  justify-content: start;
-  gap: 30px;
-  
+  justify-content: start;               /* Align to left */
+  gap: 30px;                            /* Space between icons */
 }
 
+/* ===============================
+   Column Layout (Two Columns)
+================================= */
+
+/* Column 1: usually navigation or sidebar */
 .column1 {
-  width: 40%;              /* Each column gets 50% width */
-  padding: 20px;           /* Optional padding */
+  width: 40%;                           /* 40% of the page */
+  padding: 20px;                        /* Inner spacing */
+  background-color: #222;               /* Dark background */
 }
 
+/* Column 2: usually main content */
 .column2 {
-  width: 60%;              /* Each column gets 50% width */
-  padding: 20px;           /* Optional padding */
+  width: 60%;                           /* 60% of the page */
+  padding: 20px;                        /* Inner spacing */
+  background-color: #333;               /* Slightly lighter gray */
 }
 
-.column1 {
-  background-color: #222;  /* Optional color for clarity */
-}
-
-.column2 {
-  background-color: #333;
-}
+/* ===============================
+   Navigation Menu
+================================= */
 
 .navigation { 
   display: flex;
-  flex-direction: row;
-  justify-content: start;
-  gap: 30px;
+  flex-direction: row;                  /* Links in a row */
+  justify-content: start;               /* Align to the left */
+  gap: 30px;                            /* Space between links */
 }
 
+/* ===============================
+   Published Works Section
+================================= */
+
+/* Container for project previews (flex layout) */
 .publication-icons {
   display: flex;
-  gap: 40px;
-  justify-content: start;
-  flex-wrap: wrap;
+  gap: 40px;                            /* Space between projects */
+  justify-content: start;               /* Align items to the left */
+  flex-wrap: wrap;                      /* Wrap to new line if screen is small */
 }
 
+/* Individual project box */
 .project-item {
-  text-align: center;
-  max-width: 220px;
-  display: block;
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #4da3ff;
-  text-decoration: none;
+  text-align: center;                   /* Center align text & image inside */
+  max-width: 220px;                     /* Prevent too wide cards */
+  display: block;                       /* Block-level link container */
+  font-size: 18px;                      /* Large readable link text */
+  font-weight: bold;                    /* Bold titles */
+  margin-bottom: 10px;                  /* Space after project */
+  color: #4da3ff;                       /* Blue link color */
+  text-decoration: none;                /* Remove underline */
 }
 
+/* Images inside project cards */
 .project-item img {
-  border-radius: 8px;
-  border: 2px solid #333;
+  border-radius: 8px;                   /* Rounded image corners */
+  border: 2px solid #333;               /* Dark border for contrast */
 }
 
-
+/* Figures under projects (control spacing) */
 .project-item figure {
-  margin: 0;           /* Remove default browser margins */
-  padding: 0;          /* Remove padding */
-  padding-top: 10px;
+  margin: 0;                            /* Remove default browser margin */
+  padding: 0;                           /* Remove padding */
+  padding-top: 10px;                    /* Small top space */
+}
+
+/* ===============================
+   Homepage Layout (Two Columns)
+================================= */
+
+/* Parent container for homepage (flex) */
+.homepage-container {
+  display: flex;                        /* Side-by-side layout */
+  justify-content: space-between;       /* Push columns apart */
+  align-items: flex-start;              /* Align items at top */
+  gap: 40px;                            /* Gap between main content and nav */
+  padding: 20px;                        /* Padding around the container */
+}
+
+/* Left column: main welcome content */
+.main-column {
+  flex: 2;                              /* Take 2 parts of space */
+  
+  padding: 20px;                        /* Inner padding */
+  border-radius: 8px;                   /* Rounded edges */
+}
+
+/* Right column: navigation menu */
+.navigation-home {
+  flex: 1;                              /* Take 1 part of space */
+  background-color: #222;               /* Darker background */
+  padding: 20px;                        /* Inner padding */
+  border-radius: 8px;                   /* Rounded edges */
+  display: flex;
+  flex-direction: column;               /* Links stacked vertically */
+  gap: 20px;                            /* Space between links */
+}
+
+/* Navigation links inside homepage */
+.navigation-home a {
+  color: #4da3ff;                       /* Blue link color */
+  text-decoration: none;                /* Remove underline */
+  font-size: 18px;                      /* Large readable font */
+}
+
+/* Hover effect for navigation links */
+.navigation-home a:hover {
+  text-decoration: underline;           /* Underline on hover */
+}
+
+/* Profile picture styling */
+.profilePicture img {
+  border-radius: 20%;
+  border: 2pt solid #96aa275e;
+}
+
+/* Container Styling */
+.resume-container {
+  background-color: #181818;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  max-width: 900px;
+}
+
+/* Toggle Buttons */
+.resume-toggle {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.resume-toggle button {
+  flex: 1;
+  padding: 10px 15px;
+  background-color: #333;
+  color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.resume-toggle button:hover {
+  background-color: #4da3ff;
+  color: #000;
+}
+
+.resume-toggle button.active {
+  background-color: #4da3ff;
+  color: #000;
+}
+
+/* Resume Viewer */
+.resume-display {
+  border: 2px solid #4da3ff;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #121212;
+}
+
+.center-heading {
+  display: flex;
+  justify-content: center; /* Horizontal center */
 }

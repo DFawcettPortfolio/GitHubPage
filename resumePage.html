@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumes</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="navigation">
+<a href="index.html"> 
+  Home 
+</a>
+<a href="publishedWorks.html"> 
+  See My Work 
+</a>
+<a href="https://github.com/DFawcettPortfolio" target="_blank" rel="noopener noreferrer">
+  GitHub Repo
+</a> 
+<a href="feedback.html">
+  Got Questions?
+</a>
+</div> <!-- class = "navigation"-->
+
+
+ <div class = "center-heading"><h2>My Resume</h2></div>
+<div class="resume-container">
+  <!-- Toggle Buttons -->
+  <div class="resume-toggle">
+    <button id="btn-version1" class="active">Chronological Resume</button>
+    <button id="btn-version2">Skills-Based Resume</button>
+  </div>
+
+  <!-- Resume Display Area -->
+  <div class="resume-display">
+    <embed id="resume1" src="assets/pdf/TimelineResume.pdf" type="application/pdf" width="100%" height="600px" />
+    <embed id="resume2" src="assets/pdf/SkillsBasedResume.pdf" type="application/pdf" width="100%" height="600px" style="display:none;" />
+  </div>
+</div>
+
+
+<script>
+  const btn1 = document.getElementById('btn-version1');
+  const btn2 = document.getElementById('btn-version2');
+  const resume1 = document.getElementById('resume1');
+  const resume2 = document.getElementById('resume2');
+
+  btn1.addEventListener('click', () => {
+    resume1.style.display = 'block';
+    resume2.style.display = 'none';
+    btn1.classList.add('active');
+    btn2.classList.remove('active');
+  });
+
+  btn2.addEventListener('click', () => {
+    resume1.style.display = 'none';
+    resume2.style.display = 'block';
+    btn2.classList.add('active');
+    btn1.classList.remove('active');
+  });
+</script>
+
+
+
+</body>
+</html>
