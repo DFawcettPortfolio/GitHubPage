@@ -10,21 +10,21 @@
 
 <h1>Welcome to my portfolio</h1>
 <p>This is my portfolio site, using a custom CSS page.</p>
-<p><strong>Currently under development, check back soon</strong></p>
+<p>***Currently under development, check back soon***</p>
 
-<h2> About Me</h2>
-<a href="aboutMe.html"> About Me </a>
-  
-  
-<h2>My GitHub Repo</h2>
+
+<a href="aboutMe.html"> 
+  About Me 
+</a>
+
 <a href="https://github.com/DFawcettPortfolio" target="_blank" rel="noopener noreferrer">
-  https://github.com/DFawcettPortfolio
+  My GitHub Repo
 </a>
 
 <h2>My Resume</h2>
 <!-- Button to toggle PDF -->
 <button id="toggle-pdf" style="padding:10px 15px; background:#4da3ff; color:#fff; border:none; border-radius:5px; cursor:pointer;">
-  View My Resume
+  View My Resume (PDF)
 </button>
 
 <!-- Container for the PDF -->
@@ -40,7 +40,7 @@
   btn.addEventListener('click', () => {
     isVisible = !isVisible;
     pdfContainer.style.display = isVisible ? 'block' : 'none';
-    btn.textContent = isVisible ? 'Hide Resume' : 'View My Resume';
+    btn.textContent = isVisible ? 'Hide Resume' : 'View My Resume (PDF)';
   });
 </script>
 
