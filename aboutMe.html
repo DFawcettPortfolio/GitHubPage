@@ -4,38 +4,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me</title>
-  <link rel="stylesheet" href="/GitHubPage/assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<div class = "main-body">
-<h1>About Me</h1>
-<p>
-&nbsp;&nbsp;&nbsp;&nbsp;<!--workaround to create a tab-->  I am a natural problem solver who is fascinated by the nearly limitless potential of technology to improve our lives. 
-As a Firefighter and 911 Dispatcher in the United States Air Force I learned discipline, compassion, and perserverance; 
-I now carry that experience with me, bringing a people-first mindset to my approach with a mix of curiosity, dedication, and abstract thinking.  
-</p>
-  
-<p>
-&nbsp;&nbsp;&nbsp;&nbsp;  After leaving the military I traveled to Tacoma, recognizing the growth and opportunity this area had to offer, and Washington's beauty
-proved too irresistible for me to want to live anywhere else. After a period of adjustment I felt like I was growing stagnant without a new challenge, so 
-I went back to school and got my Bachelors Degree in Information Technology from The University of Washington, Tacoma. I now hope to put that to use to
-keep learning and growing in the exciting field of IT, especially in a position that helps my local community thrive.
-</p>
-</div>
-
-<div class = "navigation-links">
-<a href="/GitHubPage/">
-  Back
+  <div class="navigation">
+<a href="index.html"> 
+  Home 
 </a>
-</div>
+<a href="publishedWorks.html"> 
+  See My Work 
+</a>
+<a href="https://github.com/DFawcettPortfolio" target="_blank" rel="noopener noreferrer">
+  GitHub Repo
+</a> 
+<a href="feedback.html">
+  Got Questions?
+</a>
+</div> <!-- class = "navigation"-->
+
+<div class ="container">
+  <div class ="column1">
+    <h1 style="text-align: center;">About Me</h1>
+    <p>
+    &nbsp;&nbsp;&nbsp;&nbsp;<!--workaround to create a tab-->  I am a natural problem solver who is fascinated by the nearly limitless potential of technology to improve our lives. 
+    As a Firefighter and 911 Dispatcher in the United States Air Force I learned discipline, compassion, and perserverance; 
+    I now carry that experience with me, bringing a people-first mindset to my approach with a mix of curiosity, dedication, and abstract thinking.  
+    </p>
+    <p>
+    &nbsp;&nbsp;&nbsp;&nbsp;  After leaving the military I traveled to Tacoma, recognizing the growth and opportunity this area had to offer, and Washington's beauty
+    proved too irresistible for me to want to live anywhere else. After a period of adjustment I felt like I was growing stagnant without a new challenge, so 
+    I went back to school and got my Bachelors Degree in Information Technology from The University of Washington, Tacoma. I now hope to put that to use to
+    keep learning and growing in the exciting field of IT, especially in a position that helps my local community thrive.
+    </p>
+  </div><!-- class="column1" -->
+
+    <div class="column2">
+    
+<h2>My Resume</h2>
+<!-- Button to toggle PDF -->
+<button id="toggle-pdf" style="padding:10px 15px; background:#4da3ff; color:#fff; border:none; border-radius:5px; cursor:pointer;">
+  View My Resume (PDF)
+</button>
+
+<!-- Container for the PDF -->
+<div id="pdf-container" style="display:none; margin-top:15px; background:#181818; padding:15px; border-radius:8px;">
+  <embed src="assets/pdf/DevinFawcettResume.pdf" type="application/pdf" width="100%" height="600px" />
+</div><!-- id="pdf-container" -->
+
+<script>
+  const btn = document.getElementById('toggle-pdf');
+  const pdfContainer = document.getElementById('pdf-container');
+  let isVisible = false;
+
+  btn.addEventListener('click', () => {
+    isVisible = !isVisible;
+    pdfContainer.style.display = isVisible ? 'block' : 'none';
+    btn.textContent = isVisible ? 'Hide Resume' : 'View My Resume (PDF)';
+  });
+</script>
+  </div><!-- class="column2" -->
+</div><!-- class="container" --> 
+
+</body>
 
 <div class = "footer">
   <footer>
     <p>This is the footer.</p>
   </footer>
-</div>
+</div><!-- class="footer" -->
   
-</body>
-  
-  <footer></footer>
 </html>

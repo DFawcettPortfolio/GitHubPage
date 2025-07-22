@@ -4,45 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
-  <link rel="stylesheet" href="/GitHubPage/assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
 <h1>Welcome to my portfolio</h1>
-<p>This is my portfolio site, using a custom CSS page.</p>
-<p>***Currently under development, check back again soon to see more***</p>
-
-
+<p>Hello!</p>
+<p>My name is Devin Fawcett, welcome to my portfolio.</p>
+<br><br>
+<div class="navigation">
 <a href="aboutMe.html"> 
   About Me 
 </a>
-<br><br>
-<a href="https://github.com/DFawcettPortfolio" target="_blank" rel="noopener noreferrer">
-  My GitHub Repo
+<a href="publishedWorks.html"> 
+  See My Work 
 </a>
+<a href="https://github.com/DFawcettPortfolio" target="_blank" rel="noopener noreferrer">
+  GitHub Repo
+</a> 
+<a href="feedback.html"> 
+  Got Questions?
+</a>
+</div> <!-- class = "navigation"-->
 
-<h2>My Resume</h2>
-<!-- Button to toggle PDF -->
-<button id="toggle-pdf" style="padding:10px 15px; background:#4da3ff; color:#fff; border:none; border-radius:5px; cursor:pointer;">
-  View My Resume (PDF)
-</button>
 
-<!-- Container for the PDF -->
-<div id="pdf-container" style="display:none; margin-top:15px; background:#181818; padding:15px; border-radius:8px;">
-  <embed src="/GitHubPage/assets/pdf/DevinFawcettResume.pdf" type="application/pdf" width="100%" height="600px" />
-</div>
-
-<script>
-  const btn = document.getElementById('toggle-pdf');
-  const pdfContainer = document.getElementById('pdf-container');
-  let isVisible = false;
-
-  btn.addEventListener('click', () => {
-    isVisible = !isVisible;
-    pdfContainer.style.display = isVisible ? 'block' : 'none';
-    btn.textContent = isVisible ? 'Hide Resume' : 'View My Resume (PDF)';
-  });
-</script>
 
 </body>
 </html>
