@@ -149,10 +149,47 @@ h1, h2, h3, h4, h5, h6 {
 /* ===============================
    Homepage Layout (Two Columns)
 ================================= */
+/* Global box-sizing fix */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .homepage-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    overflow-x: hidden; /* prevent horizontal scroll */
+  }
+
+  .main-column {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 100%;
+    height: calc(100vh - 40px); /* allow content to grow beyond viewport if needed */
+  }
+
+  .main-column img {
+    max-width: 100%; /* prevent image overflow */
+    height: auto;
+  }
+
+  .navigation-home {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px 0;
+  }
+}
+
 
 /* Parent container for homepage (flex) */
 .homepage-container {
   display: flex;                        /* Side-by-side layout */
+   flex-wrap: wrap; /* Allows items to stack on small screens */
   gap: 40px;                            /* Gap between main content and nav */
   padding: 20px;                        /* Padding around the container */
   background-color: #121212 !important; /* Main background: very dark gray */
@@ -173,7 +210,7 @@ h1, h2, h3, h4, h5, h6 {
   );
   justify-content: center;
   align-items: center;
-   min-height: calc(100vh - 40px); /* allow content to grow beyond viewport if needed */
+   min-height: 100vh; /* allow content to grow beyond viewport if needed */
   overflow-y: auto;               /* allow vertical scrolling */
   overflow-x: auto;             /* prevent horizontal scroll */
   margin: 0;
@@ -315,19 +352,16 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 20%;
 background: conic-gradient(
   from var(--angle),
-  rgba(48, 15, 197, 0.3) 0%,               /* Dark blue base */
-  rgba(255, 215, 0, 0.3) 10%,      /* Bright gold highlight */
-  rgb(133, 94, 66, 0.3) 15%,            /* Warm bronze */
-  rgba(72, 61, 139, 0.3) 25%,      /* Medium Slate Blue (purple streak) */
-  rgba(0, 191, 255, 0.3) 35%,      /* Deep Sky Blue (cool streak) */
-  rgba(255, 140, 0, 0.3) 45%,      /* Dark orange */
-  rgba(75, 0, 130, 0.3) 55%,       /* Indigo */
-  rgb(71, 61, 1, 0.3) 70%,               /* Dark gold */
-  rgba(48, 15, 197, 0.3) 0%               /* Dark blue base */
-  
+  rgba(20, 20, 30, 0.85) 0%,       /* Deep charcoal base */
+  rgba(35, 50, 65, 0.8) 20%,       /* Cool graphite */
+  rgba(55, 75, 95, 0.75) 40%,      /* Steel tone */
+  rgba(0, 220, 190, 0.45) 60%,     /* Teal highlight */
+  rgba(180, 180, 185, 0.35) 70%,   /* Subtle silver sheen */
+  rgba(55, 75, 95, 0.75) 85%,      /* Steel tone */
+  rgba(20, 20, 30, 0.85) 100%      /* Back to charcoal */
 );
   z-index: 0;
-  animation: spin 45s linear infinite;
+  animation: spin 12s linear infinite;
 }
 
 /* Keyframes to animate --angle */
