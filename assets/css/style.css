@@ -19,7 +19,7 @@ body {
   rgba(65, 65, 82, 0.3) 80%,  
   rgba(60, 60, 80, 0.3) 90%,  
   rgba(55, 55, 78, 0.3) 100%     /* deep gray with slight purple */
-);
+  );
   overflow: auto;                   /* Prevent scroll */
   }
 
@@ -331,11 +331,9 @@ overflow: auto;
   overflow: hidden;             /* scroll if content overflows */
 }
 
-.body-resumes{
+.body-resume{
 padding-left: 40px;                   /* give the menu some space from the left edge before starting */
 padding-right: 40px;                  /* give the menu some space from the right edge at end */
-min-height: 100vh;                    /* Full height for vertical centering */
-height: 100vh;
 margin: 0;
 overflow: hidden;
 }
