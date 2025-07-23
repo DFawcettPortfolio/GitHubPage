@@ -7,7 +7,10 @@ body {
   background-color: #121212 !important; /* Main background: very dark gray */
   color: #f0f0f0 !important;            /* Default text color: light gray for contrast */
   font-family: Arial, sans-serif;       /* Clean, sans-serif font */
+  background-image: linear-gradient(to top right, rgb(95, 95, 102), rgba(45, 73, 44, 0.151), rgba(17, 1, 37, 0.548) 70%);
+  overflow: hidden;                   /* Prevent scroll */
 }
+
 
 /* Links styling */
 a {  
@@ -138,10 +141,17 @@ h1, h2, h3, h4, h5, h6 {
 /* Parent container for homepage (flex) */
 .homepage-container {
   display: flex;                        /* Side-by-side layout */
-  justify-content: space-between;       /* Push columns apart */
-  align-items: flex-start;              /* Align items at top */
   gap: 40px;                            /* Gap between main content and nav */
   padding: 20px;                        /* Padding around the container */
+  background-color: #121212 !important; /* Main background: very dark gray */
+  color: #f0f0f0 !important;            /* Default text color: light gray for contrast */
+  font-family: Arial, sans-serif;       /* Clean, sans-serif font */
+  background-image: linear-gradient(to top right, rgb(95, 95, 102), rgba(45, 73, 44, 0.151), rgba(17, 1, 37, 0.548) 70%);
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  /* Full height for vertical centering */
+  margin: 0;
+   overflow: hidden;                   /* Prevent scroll */
 }
 
 /* Left column: main welcome content */
@@ -153,7 +163,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Right column: navigation menu */
 .navigation-home {
-  flex: 1;                              /* Take 1 part of space */
+  flex: 0.3;                              /* Take 1 part of space */
   background-color: #222;               /* Darker background */
   padding: 20px;                        /* Inner padding */
   border-radius: 8px;                   /* Rounded edges */
@@ -174,12 +184,6 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: underline;           /* Underline on hover */
 }
 
-/* Profile picture styling */
-.profilePicture img {
-  border-radius: 20%;
-  border: 2pt solid #96aa275e;
-}
-
 /* Container Styling */
 .resume-container {
   background-color: #181818;
@@ -187,6 +191,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 8px;
   margin-top: 20px;
   max-width: 900px;
+  height: 70%vh;
 }
 
 /* Toggle Buttons */
@@ -254,8 +259,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0px; 
 }
 
+
 .profilePicture-caption figcaption {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   line-height: 0.8;
   text-align: center; /* Center the caption text */
 }
@@ -283,5 +289,7 @@ h1, h2, h3, h4, h5, h6 {
 .body-standard{
 padding-left: 40px;                   /* give the menu some space from the left edge before starting */
 padding-right: 40px;                   /* give the menu some space from the right edge at end */
-
+min-height: 100vh;  /* Full height for vertical centering */
+height: 100%;
+margin: 0;
 }
