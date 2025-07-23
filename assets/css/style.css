@@ -173,10 +173,11 @@ h1, h2, h3, h4, h5, h6 {
   );
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 40px);
-
+   min-height: calc(100vh - 40px); /* allow content to grow beyond viewport if needed */
+  overflow-y: auto;               /* allow vertical scrolling */
+  overflow-x: auto;             /* prevent horizontal scroll */
   margin: 0;
-  overflow: auto;                   /* Prevent scroll */
+  
 }
 
 /* Left column: main welcome content */
@@ -269,26 +270,81 @@ h1, h2, h3, h4, h5, h6 {
   .intro-text {
     flex: 1;
   }
+  :root {
+  --angle: 0deg;
+}
+
+/* Register the property so it can animate */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
 
 .profilePicture {
-  flex-shrink: 0; /* Prevent image from shrinking */
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center horizontally */
-  margin-right: 20px; /* Space between picture and intro text */
+  align-items: center;
+  margin-right: 20px; /* Keep original spacing */
 }
 
+.profilePicture figure {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Image itself */
 .profilePicture img {
   border-radius: 20%;
-  border: 2pt solid #96aa275e;
-  margin-bottom: 0px; 
+  display: block;
+  position: relative;
+  z-index: 1;
 }
+
+/* Spinning gradient border */
+.profilePicture figure::before {
+  content: "";
+  position: absolute;
+  top: -4px;   /* Border thickness */
+  left: -4px;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  border-radius: 20%;
+background: conic-gradient(
+  from var(--angle),
+  rgba(48, 15, 197, 0.3) 0%,               /* Dark blue base */
+  rgba(255, 215, 0, 0.3) 10%,      /* Bright gold highlight */
+  rgb(133, 94, 66, 0.3) 15%,            /* Warm bronze */
+  rgba(72, 61, 139, 0.3) 25%,      /* Medium Slate Blue (purple streak) */
+  rgba(0, 191, 255, 0.3) 35%,      /* Deep Sky Blue (cool streak) */
+  rgba(255, 140, 0, 0.3) 45%,      /* Dark orange */
+  rgba(75, 0, 130, 0.3) 55%,       /* Indigo */
+  rgb(71, 61, 1, 0.3) 70%,               /* Dark gold */
+  rgba(48, 15, 197, 0.3) 0%               /* Dark blue base */
+  
+);
+  z-index: 0;
+  animation: spin 45s linear infinite;
+}
+
+/* Keyframes to animate --angle */
+@keyframes spin {
+  to {
+    --angle: 360deg;
+  }
+}
+
+
 
 
 .profilePicture-caption figcaption {
   font-size: 0.8rem;
   line-height: 0.8;
   text-align: center; /* Center the caption text */
+  margin-top: 8px;
 }
 
 .profilePicture-caption p {
