@@ -27,8 +27,11 @@ body {
 /* Links styling */
 a {  
   color: rgb(117, 172, 125);
-  
   font-size: 18px;      
+}
+.project-link{
+  color: rgb(134, 160, 233);   
+  font-size: 16px;
 }
 
 /* Headings (h1, h2, etc.) */
