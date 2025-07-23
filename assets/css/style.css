@@ -5,20 +5,20 @@
 /* Force entire page into dark mode */
 body {  
   background-color: #121212 !important; /* Main background: very dark gray */
-  color: rgb(153, 163, 161) !important; /* Default text color: light for contrast */
+  color: rgba(255, 255, 255, 0.8) !important;            /* Text inside stays pure white */
   font-family: Arial, sans-serif;       /* Clean, sans-serif font */
   background-image: linear-gradient(
   to bottom left,
   rgba(96, 130, 100, 0.3) 0%,    /* muted green start */
-  rgba(100, 135, 105, 0.3) 7%,  
-  rgba(105, 140, 110, 0.3) 15%,  /* green ends here */
-  rgba(85, 85, 95, 0.3) 25%,     /* gray begins */
-  rgba(80, 80, 90, 0.3) 40%,  
-  rgba(75, 75, 88, 0.3) 55%,  
-  rgba(70, 70, 85, 0.3) 70%,  
-  rgba(65, 65, 82, 0.3) 80%,  
-  rgba(60, 60, 80, 0.3) 90%,  
-  rgba(55, 55, 78, 0.3) 100%     /* deep gray with slight purple */
+    rgba(100, 135, 105, 0.3) 5%,  
+    rgba(105, 140, 110, 0.3) 10%,  /* green ends here */
+    rgba(85, 85, 95, 0.3) 20%,     /* gray begins */
+    rgba(80, 80, 90, 0.3) 40%,  
+    rgba(75, 75, 88, 0.3) 55%,  
+    rgba(70, 70, 85, 0.3) 70%,  
+    rgba(65, 65, 82, 0.3) 80%,  
+    rgba(60, 60, 80, 0.3) 90%,  
+    rgba(55, 55, 78, 0.3) 100%     /* deep gray with slight purple */
   );
   overflow: auto;                   /* Prevent scroll */
   }
@@ -26,13 +26,9 @@ body {
 
 /* Links styling */
 a {  
-  color: #a8aa47 !important;            /* Bright blue for links */
-}
-
-/* Header, footer, and navigation bars */
-header, footer, nav {  
-  background-color: #1f1f1f !important; /* Slightly lighter gray for contrast */
-  color: #ffffff !important;            /* Text inside stays pure white */
+  color: rgb(117, 172, 125);
+  
+  font-size: 18px;      
 }
 
 /* Headings (h1, h2, etc.) */
@@ -187,14 +183,14 @@ h1, h2, h3, h4, h5, h6 {
   gap: 40px;                            /* Gap between main content and nav */
   padding: 20px;                        /* Padding around the container */
   background-color: #121212 !important; /* Main background: very dark gray */
-  color: rgb(153, 163, 161) !important; /* Default text color: light for contrast */
+  color: rgba(255, 255, 255, 0.8);            /* Text inside stays pure white */
   font-family: Arial, sans-serif;       /* Clean, sans-serif font */
   background-image: linear-gradient(
     to top right,
     rgba(96, 130, 100, 0.3) 0%,    /* muted green start */
-    rgba(100, 135, 105, 0.3) 7%,  
-    rgba(105, 140, 110, 0.3) 15%,  /* green ends here */
-    rgba(85, 85, 95, 0.3) 25%,     /* gray begins */
+    rgba(100, 135, 105, 0.3) 5%,  
+    rgba(105, 140, 110, 0.3) 10%,  /* green ends here */
+    rgba(85, 85, 95, 0.3) 20%,     /* gray begins */
     rgba(80, 80, 90, 0.3) 40%,  
     rgba(75, 75, 88, 0.3) 55%,  
     rgba(70, 70, 85, 0.3) 70%,  
@@ -231,7 +227,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Navigation links inside homepage */
 .navigation-home a {
-  color: #4da3ff;                       /* Blue link color */
+  color: rgb(117, 172, 125);
   text-decoration: none;                /* Remove underline */
   font-size: 18px;                      /* Large readable font */
 }
