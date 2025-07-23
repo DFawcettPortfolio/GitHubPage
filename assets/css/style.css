@@ -21,6 +21,7 @@ body {
     rgba(55, 55, 78, 0.3) 100%     /* deep gray with slight purple */
   );
   overflow: auto;                   /* Prevent scroll */
+   min-height: calc(100vh-35px);
   }
 
 
@@ -100,6 +101,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: start;               /* Align to the left */
   gap: 30px;                            /* Space between links */
   padding-left: 40px;                   /* give the menu some space from the left edge before starting */
+  padding-top:10px;
 }
 
 /* ===============================
@@ -140,8 +142,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ===============================
-   Homepage Layout (Two Columns)
+   Homepage Layout
 ================================= */
+
 /* Global box-sizing fix */
 *,
 *::before,
@@ -149,48 +152,13 @@ h1, h2, h3, h4, h5, h6 {
   box-sizing: border-box;
 }
 
-@media (max-width: 900px) {
-  .homepage-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    overflow-x: hidden; /* prevent horizontal scroll */
-  }
-
-  .main-column {
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-    max-width: 100%;
-    height: calc(100vh - 40px); /* allow content to grow beyond viewport if needed */
-  }
-
-  .main-column img {
-    max-width: 100%; /* prevent image overflow */
-    height: auto;
-  }
-
-  .navigation-home {
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
-    padding: 15px 0;
-  }
-}
-
-
-/* Parent container for homepage (flex) */
-.homepage-container {
-  display: flex;                        /* Side-by-side layout */
-   flex-wrap: wrap; /* Allows items to stack on small screens */
-  gap: 40px;                            /* Gap between main content and nav */
-  padding: 20px;                        /* Padding around the container */
+.body-home {  
   background-color: #121212 !important; /* Main background: very dark gray */
-  color: rgba(255, 255, 255, 0.8);            /* Text inside stays pure white */
+  color: rgba(255, 255, 255, 0.8) !important;            /* Text inside stays pure white */
   font-family: Arial, sans-serif;       /* Clean, sans-serif font */
   background-image: linear-gradient(
-    to top right,
-    rgba(96, 130, 100, 0.3) 0%,    /* muted green start */
+  to top right,
+  rgba(96, 130, 100, 0.3) 0%,    /* muted green start */
     rgba(100, 135, 105, 0.3) 5%,  
     rgba(105, 140, 110, 0.3) 10%,  /* green ends here */
     rgba(85, 85, 95, 0.3) 20%,     /* gray begins */
@@ -201,44 +169,133 @@ h1, h2, h3, h4, h5, h6 {
     rgba(60, 60, 80, 0.3) 90%,  
     rgba(55, 55, 78, 0.3) 100%     /* deep gray with slight purple */
   );
-  justify-content: center;
-  align-items: center;
-   min-height: 100vh; /* allow content to grow beyond viewport if needed */
-  overflow-y: auto;               /* allow vertical scrolling */
-  overflow-x: auto;             /* prevent horizontal scroll */
-  margin: 0;
-  
-}
+  overflow: auto;                   /* Prevent scroll */
+  }
 
-/* Left column: main welcome content */
-.main-column {
-  flex: 2;                              /* Take 2 parts of space */
-  border-radius: 8px;                   /* Rounded edges */
-
-}
-
-/* Right column: navigation menu */
-.navigation-home {
-  flex: 0.3;                              /* Take 1 part of space */
-  background-color: #222;               /* Darker background */
-  padding: 20px;                        /* Inner padding */
-  border-radius: 8px;                   /* Rounded edges */
+/* Intro Row (Profile Pic + Text) */
+.intro-row {
   display: flex;
-  flex-direction: column;               /* Links stacked vertically */
-  gap: 20px;                            /* Space between links */
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px; /* Space between image and text */
+  margin-bottom: 30px; /* Space before About Me */
 }
 
-/* Navigation links inside homepage */
-.navigation-home a {
-  color: rgb(117, 172, 125);
-  text-decoration: none;                /* Remove underline */
-  font-size: 18px;                      /* Large readable font */
+/* Profile Picture Figure */
+.profilePicture figure {
+  text-align: center;
+  margin: 0;
 }
 
-/* Hover effect for navigation links */
-.navigation-home a:hover {
-  text-decoration: underline;           /* Underline on hover */
+/* Image container for gradient border */
+.profileImage-container {
+  position: relative;
+  display: inline-block;
+  border-radius: 20%;
+  padding: 0;
 }
+
+/* Actual image */
+.profileImage-container img {
+  border-radius: 20%;
+  display: block;
+  position: relative;
+  z-index: 1; /* Above gradient */
+}
+
+/* Spinning gradient border only around image */
+:root {
+  --angle: 0deg;
+}
+
+.profileImage-container::before {
+  content: "";
+  position: absolute;
+  top: -6px;   /* Border thickness */
+  left: -6px;
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-radius: 20%;
+  background: conic-gradient(
+    from var(--angle),
+    rgba(20, 20, 30, 0.85) 0%,
+    rgba(35, 50, 65, 0.8) 20%,
+    rgba(55, 75, 95, 0.75) 40%,
+    rgba(0, 220, 190, 0.45) 60%,
+    rgba(180, 180, 185, 0.35) 70%,
+    rgba(55, 75, 95, 0.75) 85%,
+    rgba(20, 20, 30, 0.85) 100%
+  );
+  z-index: 0;
+  animation: spin 12s linear infinite;
+}
+
+/* Animate --angle */
+@keyframes spin {
+  to {
+    --angle: 360deg;
+  }
+}
+
+/* Caption directly below image */
+.profilePicture figcaption {
+  font-size: 0.8rem;
+  line-height: 0.1;
+  margin-top: 8px;
+}
+
+/* Intro text next to image */
+.intro-text h1 {
+  margin: 0;
+}
+
+.intro-text p {
+  margin-top: 8px;
+  font-size: 1.1rem;
+}
+
+/* About Me section below */
+.aboutMe-row {
+  display: block;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  html, body {
+    height: auto !important;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto !important;
+  }
+
+  .body-centered {
+    height: auto;
+    padding-bottom: 160vh; /* Large bottom padding for scrolling */
+    overflow: visible;
+  }
+
+  .intro-row {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .profilePicture {
+    margin-top: 165vh; /* Push down */
+  }
+
+  .intro-text {
+    margin-top: 20px;
+  }
+}
+
+
+
+
+/* ===============================
+  ??????? Section
+================================= */
 
 /* Container Styling */
 .resume-container {
@@ -292,106 +349,12 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center; /* Horizontal center */
 }
 
-  .intro-row {
-    display: flex;
-    align-items: center;
-    }
-
-  .intro-text {
-    flex: 1;
-  }
-  :root {
-  --angle: 0deg;
-}
 
 /* Register the property so it can animate */
 @property --angle {
   syntax: '<angle>';
   initial-value: 0deg;
   inherits: false;
-}
-
-.profilePicture {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-right: 20px; /* Keep original spacing */
-}
-
-.profilePicture figure {
-  position: relative;
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-}
-
-/* Image itself */
-.profilePicture img {
-  border-radius: 20%;
-  display: block;
-  position: relative;
-  z-index: 1;
-}
-
-/* Spinning gradient border */
-.profilePicture figure::before {
-  content: "";
-  position: absolute;
-  top: -4px;   /* Border thickness */
-  left: -4px;
-  width: calc(100% + 8px);
-  height: calc(100% + 8px);
-  border-radius: 20%;
-background: conic-gradient(
-  from var(--angle),
-  rgba(20, 20, 30, 0.85) 0%,       /* Deep charcoal base */
-  rgba(35, 50, 65, 0.8) 20%,       /* Cool graphite */
-  rgba(55, 75, 95, 0.75) 40%,      /* Steel tone */
-  rgba(0, 220, 190, 0.45) 60%,     /* Teal highlight */
-  rgba(180, 180, 185, 0.35) 70%,   /* Subtle silver sheen */
-  rgba(55, 75, 95, 0.75) 85%,      /* Steel tone */
-  rgba(20, 20, 30, 0.85) 100%      /* Back to charcoal */
-);
-  z-index: 0;
-  animation: spin 12s linear infinite;
-}
-
-/* Keyframes to animate --angle */
-@keyframes spin {
-  to {
-    --angle: 360deg;
-  }
-}
-
-
-
-
-.profilePicture-caption figcaption {
-  font-size: 0.8rem;
-  line-height: 0.8;
-  text-align: center; /* Center the caption text */
-  margin-top: 8px;
-}
-
-.profilePicture-caption p {
-  margin: 2px 0;
-}
-
-/* Remove default figure margins and padding */
-.profilePicture figure {
-  margin: 0;
-  padding: 0;
-}
-
-/* Make the caption hug the image */
-.profilePicture-caption {
-  margin-top: 2px; /* Adjust this to control spacing (1-5px) */
-}
-
-/* Optional: If you want to make it even tighter */
-.profilePicture img {
-  display: block; /* Removes any tiny space under images */
 }
 
 .body-standard{
@@ -409,7 +372,7 @@ overflow: auto;
   justify-content: center;    /* center vertically */
   padding-left: 40px;
   padding-right: 40px;
- height: calc(100vh - 35px); /* Subtract navbar height */
+  height: calc(100vh - 48px); /* Subtract navbar height */
   margin: 0;
   overflow: hidden;             /* scroll if content overflows */
 }
