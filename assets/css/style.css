@@ -7,9 +7,21 @@ body {
   background-color: #121212 !important; /* Main background: very dark gray */
   color: #f0f0f0 !important;            /* Default text color: light gray for contrast */
   font-family: Arial, sans-serif;       /* Clean, sans-serif font */
-  background-image: linear-gradient(to top right, rgb(95, 95, 102), rgba(45, 73, 44, 0.151), rgba(17, 1, 37, 0.548) 70%);
-  overflow: hidden;                   /* Prevent scroll */
-}
+  background-image: linear-gradient(
+  to bottom left,
+  rgba(96, 130, 100, 0.3) 0%,    /* muted green start */
+  rgba(100, 135, 105, 0.3) 7%,  
+  rgba(105, 140, 110, 0.3) 15%,  /* green ends here */
+  rgba(85, 85, 95, 0.3) 25%,     /* gray begins */
+  rgba(80, 80, 90, 0.3) 40%,  
+  rgba(75, 75, 88, 0.3) 55%,  
+  rgba(70, 70, 85, 0.3) 70%,  
+  rgba(65, 65, 82, 0.3) 80%,  
+  rgba(60, 60, 80, 0.3) 90%,  
+  rgba(55, 55, 78, 0.3) 100%     /* deep gray with slight purple */
+);
+  overflow: auto;                   /* Prevent scroll */
+  }
 
 
 /* Links styling */
@@ -146,12 +158,25 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #121212 !important; /* Main background: very dark gray */
   color: #f0f0f0 !important;            /* Default text color: light gray for contrast */
   font-family: Arial, sans-serif;       /* Clean, sans-serif font */
-  background-image: linear-gradient(to top right, rgb(95, 95, 102), rgba(45, 73, 44, 0.151), rgba(17, 1, 37, 0.548) 70%);
+  background-image: linear-gradient(
+    to top right,
+    rgba(96, 130, 100, 0.3) 0%,    /* muted green start */
+    rgba(100, 135, 105, 0.3) 7%,  
+    rgba(105, 140, 110, 0.3) 15%,  /* green ends here */
+    rgba(85, 85, 95, 0.3) 25%,     /* gray begins */
+    rgba(80, 80, 90, 0.3) 40%,  
+    rgba(75, 75, 88, 0.3) 55%,  
+    rgba(70, 70, 85, 0.3) 70%,  
+    rgba(65, 65, 82, 0.3) 80%,  
+    rgba(60, 60, 80, 0.3) 90%,  
+    rgba(55, 55, 78, 0.3) 100%     /* deep gray with slight purple */
+  );
   justify-content: center;
   align-items: center;
-  height: 100vh;  /* Full height for vertical centering */
+  height: calc(100vh - 40px);
+
   margin: 0;
-   overflow: hidden;                   /* Prevent scroll */
+  overflow: auto;                   /* Prevent scroll */
 }
 
 /* Left column: main welcome content */
@@ -227,7 +252,7 @@ h1, h2, h3, h4, h5, h6 {
 .resume-display {
   border: 2px solid #4da3ff;
   border-radius: 8px;
-  overflow: hidden;
+  overflow: auto;
   background-color: #121212;
 }
 
@@ -288,8 +313,29 @@ h1, h2, h3, h4, h5, h6 {
 
 .body-standard{
 padding-left: 40px;                   /* give the menu some space from the left edge before starting */
-padding-right: 40px;                   /* give the menu some space from the right edge at end */
-min-height: 100vh;  /* Full height for vertical centering */
-height: 100%;
+padding-right: 40px;                  /* give the menu some space from the right edge at end */
+min-height: 100vh;                    /* Full height for vertical centering */
+height: 100vh;
 margin: 0;
+overflow: auto;
+}
+
+.body-centered {
+  display: flex;              /* make it a flex container */
+  flex-direction: column;     /* stack children vertically */
+  justify-content: center;    /* center vertically */
+  padding-left: 40px;
+  padding-right: 40px;
+ height: calc(100vh - 35px); /* Subtract navbar height */
+  margin: 0;
+  overflow: hidden;             /* scroll if content overflows */
+}
+
+.body-resumes{
+padding-left: 40px;                   /* give the menu some space from the left edge before starting */
+padding-right: 40px;                  /* give the menu some space from the right edge at end */
+min-height: 100vh;                    /* Full height for vertical centering */
+height: 100vh;
+margin: 0;
+overflow: hidden;
 }
