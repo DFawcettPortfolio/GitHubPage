@@ -5,7 +5,7 @@
 /* Force entire page into dark mode */
 body {  
   background-color: #121212 !important; /* Main background: very dark gray */
-  color: #f0f0f0 !important;            /* Default text color: light gray for contrast */
+  color: rgb(153, 163, 161) !important; /* Default text color: light for contrast */
   font-family: Arial, sans-serif;       /* Clean, sans-serif font */
   background-image: linear-gradient(
   to bottom left,
@@ -26,7 +26,7 @@ body {
 
 /* Links styling */
 a {  
-  color: #4da3ff !important;            /* Bright blue for links */
+  color: #a8aa47 !important;            /* Bright blue for links */
 }
 
 /* Header, footer, and navigation bars */
@@ -37,7 +37,7 @@ header, footer, nav {
 
 /* Headings (h1, h2, etc.) */
 h1, h2, h3, h4, h5, h6 {  
-  color: #ffffff !important;            /* Force white headings for readability */
+  color: rgb(134, 160, 233) !important;            
 }
 
 /* ===============================
@@ -52,12 +52,6 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;                        /* Flex layout for horizontal alignment */
 }
 
-/* Special large text style for emphasis */
-.big-text {  
-  font-size: 38px;                      /* Large font size */
-  font-style: italic;                   /* Italic style */
-  color: #ffffff;                       /* White color for visibility */
-}
 
 /* ===============================
    Icon Layout Containers
@@ -193,7 +187,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 40px;                            /* Gap between main content and nav */
   padding: 20px;                        /* Padding around the container */
   background-color: #121212 !important; /* Main background: very dark gray */
-  color: #f0f0f0 !important;            /* Default text color: light gray for contrast */
+  color: rgb(153, 163, 161) !important; /* Default text color: light for contrast */
   font-family: Arial, sans-serif;       /* Clean, sans-serif font */
   background-image: linear-gradient(
     to top right,
