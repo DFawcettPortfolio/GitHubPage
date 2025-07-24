@@ -172,6 +172,18 @@ h1, h2, h3, h4, h5, h6 {
   overflow: auto;                   /* Prevent scroll */
   }
 
+.home-container {
+  display: flex;              /* make it a flex container */
+  flex-direction: column;     /* stack children vertically */
+  justify-content: center;    /* center vertically */
+  padding-left: 40px;
+  padding-right: 40px;
+  height: calc(100vh - 48px); /* Subtract navbar height */
+  margin: 0;
+  overflow: hidden;             /* scroll if content overflows */
+}
+
+
 /* Intro Row (Profile Pic + Text) */
 .intro-row {
   display: flex;
@@ -290,9 +302,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-
-
-
 /* ===============================
   ??????? Section
 ================================= */
@@ -349,6 +358,9 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center; /* Horizontal center */
 }
 
+.navigation{
+  padding-right: 15px;
+}
 
 /* Register the property so it can animate */
 @property --angle {
@@ -382,4 +394,15 @@ padding-left: 40px;                   /* give the menu some space from the left 
 padding-right: 40px;                  /* give the menu some space from the right edge at end */
 margin: 0;
 overflow: hidden;
+}
+
+.feedback-centered{
+  display: flex;              /* make it a flex container */
+  flex-direction: column;     /* stack children vertically */
+  justify-content: center;    /* center vertically */
+  padding-left: 40px;
+  padding-right: 40px;
+  height: calc(100vh - 48px); /* Subtract navbar height */
+  margin: 0;
+  overflow: hidden;             /* scroll if content overflows */
 }
